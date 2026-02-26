@@ -1,430 +1,316 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reganti Divya Sree</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-   <style>
-    
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .navbar{
-            display: flex;
-            justify-content: space-around;
-            align-items: Center;
-            background:rgba(237, 203, 34, 0.904);
-        }
-        .image{
-            height: 70px;
-            width: 70px;
-            border-radius: 50%;
-        }
-        div{
-            align-items: center;
-            display: flex;
-            gap: 30px;
-        }
-        div a{
-            font-size: 20px;
-            color: black;
-            font-weight: bold;
-            text-decoration: none;
-            
-        }
-         .navbar a:hover{
-            color: rgb(198, 48, 11);
-        }
-            h1{
-            font-size: 40px;
-             color: rgba(237, 203, 34, 0.904);
-            margin-bottom: 15px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reganti Divya Sree</title>
 
-        h3{
-            font-size: 20px;
-            color: white;
-            margin-bottom: 20px;
-        }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        .img{
-            height: 600px;
-            width: 450px;
-            
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #b0a81e;
-            transition: transform 0.4s ease;
-        }
+<style>
 
-        #home{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-            background:black;
-        }
-        .text{
-            margin-top: 20px;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-        .About{
-            padding: 50px;
-              height: 50vh;
-            text-align: center;
-            background:black;
-            display: flex;
-            flex-direction: column;
-        }
-        .btn{
-            padding: 10px 20px;
-            font-size: 18px;
-            color: white;
-            font-weight: bold;
-            background-color: rgba(237, 203, 34, 0.904);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .para{
-            font-size: 20px;
-            color: white;
-            line-height: 1.5;
-            
-        }
-        #about{
-            color: rgba(237, 203, 34, 0.904);
-            margin-bottom: 20px;
-           
-        }
-         /* Skills Section */
-#skills {
-    padding: 50px;
-              height: 80vh;
-            text-align: center;
-            background:black;
-            display: flex;
-            flex-direction: column;
+/* ================= GLOBAL ================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* Main Heading */
-#skills h1 {
-  color: gold;
-  font-size: 40px;
-  margin-bottom: 30px;
+body{
+  font-family:Arial, sans-serif;
+  background:#000;
+  color:#fff;
+  scroll-behavior:smooth;
 }
 
-/* Sub Headings */
-#skills h2 {
-  color: gold;
-  margin: 40px 0 20px;
+section{
+  padding:80px 20px;
+  text-align:center;
 }
 
-/* Card Container */
-.container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+h1{
+  font-size:40px;
+  color:gold;
+  margin-bottom:20px;
 }
 
-/* Skill Cards */
-.card {
-  background-color: #111;
-  border: 1px solid gold;
-  padding: 20px 30px;
-  border-radius: 8px;
-  width: 200px;
-  transition: 0.3s ease;
+h2{
+  color:gold;
+  margin:40px 0 20px;
 }
 
-/* Card Text */
-.card h3 {
-  color: #fff;
-  margin: 0;
+/* ================= NAVBAR ================= */
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 60px;
+  background:rgba(237,203,34,0.95);
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-/* Hover Effect */
-.card:hover {
-  background-color: gold;
-  color: #000;
-  transform: translateY(-5px);
+.image{
+  height:60px;
+  width:60px;
+  border-radius:50%;
 }
 
-.card:hover h3 {
-  color: #000;
-}
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #000;
-  color: #fff;
+.nav-links{
+  display:flex;
+  gap:30px;
+  align-items:center;
 }
 
-#projects {
-  padding: 50px 20px;
-  text-align: center;
+.nav-links a{
+  text-decoration:none;
+  font-weight:bold;
+  color:black;
+  transition:0.3s;
 }
 
-#projects h1 {
-  color: gold;
-  margin-bottom: 40px;
+.nav-links a:hover{
+  color:rgb(198,48,11);
 }
 
-/* Project Cards */
-.project-card {
-  background-color: #111;
-  border: 1px solid gold;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 20px auto;
-  width: 80%;
-  text-align: left;
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+  color:black;
 }
 
-.project-card h2 {
-  color: gold;
-  margin-top: 0;
+/* ================= HOME ================= */
+
+#home{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:60px;
+  min-height:80vh;
+  padding:40px;
+  text-align:center;
 }
 
-.project-card:hover {
-  background-color: gold;
-  color: #000;
-  transition: 0.3s;
+.text{
+  max-width:500px;
 }
 
-.project-card:hover h2 {
-  color: #000;
+.text h3{
+  margin-bottom:20px;
 }
 
-#contact {
-  padding: 60px 20px;
-  text-align: center;
+.btn{
+  padding:10px 20px;
+  font-size:16px;
+  font-weight:bold;
+  background:gold;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
 }
 
-#contact h1 {
-  color: gold;
-  margin-bottom: 30px;
+.btn:hover{
+  background:#fff;
+  color:#000;
 }
 
-.contact-form {
-  max-width: 400px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.img{
+  width:450px;
+  height:500px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid gold;
+}
+
+/* ================= ABOUT ================= */
+
+.About{
+  max-width:900px;
+  margin:auto;
+}
+
+.para{
+  font-size:18px;
+  line-height:1.6;
+}
+
+/* ================= SKILLS ================= */
+
+.container{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.card{
+  background:#111;
+  border:1px solid gold;
+  padding:20px 30px;
+  border-radius:8px;
+  width:200px;
+  transition:0.3s;
+}
+
+.card:hover{
+  background:gold;
+  color:#000;
+  transform:translateY(-5px);
+}
+
+/* ================= PROJECTS ================= */
+
+.project-card{
+  background:#111;
+  border:1px solid gold;
+  border-radius:8px;
+  padding:20px;
+  margin:20px auto;
+  width:80%;
+  text-align:left;
+  transition:0.3s;
+}
+
+.project-card:hover{
+  background:gold;
+  color:#000;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-form{
+  max-width:400px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
 }
 
 .contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  border: 1px solid gold;
-  border-radius: 5px;
-  background-color: #111;
-  color: #fff;
+.contact-form textarea{
+  padding:10px;
+  border:1px solid gold;
+  border-radius:5px;
+  background:#111;
+  color:#fff;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: gold;
+.contact-form button{
+  padding:10px;
+  background:gold;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  font-weight:bold;
 }
 
-.contact-form button {
-  padding: 10px;
-  background-color: gold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
+.contact-form button:hover{
+  background:#fff;
+  color:#000;
 }
 
-.contact-form button:hover {
-  background-color: #fff;
-  color: #000;
-  transition: 0.3s;
-}
+/* ================= RESPONSIVE ================= */
 
+/* Tablet */
+@media(max-width:992px){
 
-/* ============================= */
-/* RESPONSIVE DESIGN */
-/* ============================= */
-
-/* Tablets (768px and below) */
-@media (max-width: 768px) {
-
-  .navbar {
-    flex-direction: column;
-    padding: 15px 0;
+  #home{
+    flex-direction:column;
+    gap:40px;
   }
 
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+  .img{
+    width:300px;
+    height:300px;
   }
 
-  #home {
-    flex-direction: column;
-    height: auto;
-    padding: 40px 20px;
+  .card{
+    width:45%;
   }
 
-  .img {
-    width: 250px;
-    height: 250px;
-    margin-top: 20px;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-
-  h3 {
-    font-size: 18px;
-  }
-
-  .About {
-    height: auto;
-    padding: 40px 20px;
-  }
-
-  #skills {
-    height: auto;
-    padding: 40px 20px;
-  }
-
-  .container {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .card {
-    width: 45%;
-  }
-
-  #projects .project-card {
-    width: 95%;
-  }
-
-  #contact {
-    padding: 40px 20px;
+  .project-card{
+    width:95%;
   }
 }
 
+/* Mobile */
+@media(max-width:768px){
 
-/* Mobile Devices (480px and below) */
-@media (max-width: 480px) {
-
-  .image {
-    height: 50px;
-    width: 50px;
+  .navbar{
+    padding:15px 20px;
   }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
+  .menu-toggle{
+    display:block;
   }
 
-  div a {
-    font-size: 16px;
+  .nav-links{
+    position:absolute;
+    top:100%;
+    right:0;
+    width:100%;
+    background:rgba(237,203,34,0.98);
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    padding:20px 0;
+    display:none;
   }
 
-  .img {
-    width: 200px;
-    height: 200px;
+  .nav-links.active{
+    display:flex;
   }
 
-  h1 {
-    font-size: 26px;
+  .img{
+    width:220px;
+    height:220px;
   }
 
-  h3 {
-    font-size: 16px;
+  h1{
+    font-size:28px;
   }
 
-  .para {
-    font-size: 16px;
-  }
-
-  .card {
-    width: 100%;
-  }
-
-  .project-card {
-    width: 100%;
-  }
-
-  .contact-form {
-    width: 100%;
+  .card{
+    width:100%;
   }
 }
-/* Hide hamburger by default */
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: black;
-}
 
-/* Default nav links */
-.nav-links {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-}
+/* Small Mobile */
+@media(max-width:480px){
 
-/* Mobile View */
-@media (max-width: 768px) {
-
-  .navbar {
-    justify-content: space-between;
-    padding: 10px 20px;
+  .image{
+    height:50px;
+    width:50px;
   }
 
-  .menu-toggle {
-    display: block;
+  .img{
+    width:180px;
+    height:180px;
   }
 
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background-color: rgba(237, 203, 34, 0.95);
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-    display: none;
+  h1{
+    font-size:24px;
   }
 
-  .nav-links a {
-    padding: 10px 0;
-    font-size: 18px;
-  }
-
-  .nav-links.active {
-    display: flex;
+  .para{
+    font-size:15px;
   }
 }
-   </style>
+
+</style>
 </head>
-<body>
-  <nav class="navbar">
-  <img src="image.png" alt="Logo" class="image">
 
-  <!-- Hamburger Icon -->
-  <div class="menu-toggle" id="menu-toggle">
-    <i class="fa-solid fa-bars"></i>
-  </div>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+  <img src="image.png" class="image" alt="logo">
 
   <div class="nav-links" id="nav-links">
     <a href="#home">Home</a>
@@ -433,128 +319,128 @@ body {
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
 
-    <a href="https://www.linkedin.com/in/reganti-divya-sree-0b4908288/" target="_blank">
+    <a href="https://www.linkedin.com/" target="_blank">
       <i class="fa-brands fa-linkedin"></i>
     </a>
-    <a href="https://github.com/Divyasree954" target="_blank">
+
+    <a href="https://github.com/" target="_blank">
       <i class="fa-brands fa-github"></i>
     </a>
   </div>
-</nav>
 
-</nav>
-    <div id="home">
-        <div class="text">
-        <h1>Reganti Divya Sree</h1>
-        <h3>I am a web developer. <br> I have experience in HTML, CSS, JavaScript and React.
-            <br> I am passionate about web development and I am always eager to learn new technologies.</h3>
-          <a href="#contact">
-  <button class="btn">Get in Touch</button>
-</a>
-            </div>
-        <img src="div.jpeg" alt="" class="img">
-    </div>
-    <div class="About">
-        <h1 id="about">About Me</h1>
-        <p class="para">Hi, I’m Divya Sree, a passionate web developer with a strong foundation in HTML, CSS, JavaScript, and React. <br>
-            I enjoy building responsive, user-friendly web applications that deliver seamless digital experiences. <br>
-
-   I’m constantly exploring new technologies and best practices to enhance my skills and stay up to date in the ever-evolving world of web development. <br> My goal is to create clean, efficient, and scalable solutions while continuously learning and growing as a developer.</p>    
-
-    </div>
-    <div id="skills">
-        <h1>Skills</h1>
-       
-
-  <h2>🌐 Web Development Skills</h2>
-  <div class="container">
-    <div class="card">
-      <h3>HTML</h3>
- 
-    </div>
-    <div class="card">
-      <h3>CSS</h3>
-      
-    </div>
-    <div class="card">
-      <h3>JavaScript</h3>
-  
-    </div>
-    <div class="card">
-      <h3>Responsive Design</h3>
-  
-    </div>
-    <div class="card">
-      <h3>Git & GitHub</h3>
-    
-    </div>
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fa-solid fa-bars"></i>
   </div>
 
-  <h2>💻 MERN Stack Skills</h2>
-  <div class="container">
-    <div class="card">
-      <h3>MongoDB</h3>
-     
-    </div>
-    <div class="card">
-      <h3>Express.js</h3>
-    
-    </div>
-    <div class="card">
-      <h3>React</h3>
-     
-    </div>
-    <div class="card">
-      <h3>Node.js</h3>
-   
-    </div>
+</nav>
+
+<!-- ================= HOME ================= -->
+
+<section id="home">
+  <div class="text">
+    <h1>Reganti Divya Sree</h1>
+    <h3>
+      I am a web developer.<br>
+      Experienced in HTML, CSS, JavaScript and React.<br>
+      Passionate about building modern web applications.
+      I transform ideas into modern digital experiences using HTML, CSS, 
+  JavaScript, React, and the MERN stack.  <br> 
+  I focus on writing clean, efficient, and scalable code while 
+  continuously learning new technologies to stay ahead in the tech world.
+
+    </h3>
+    <a href="#contact">
+      <button class="btn">Get in Touch</button>
+    </a>
   </div>
-    </div>
-   <section id="projects">
+
+  <img src="div.jpeg" class="img" alt="profile">
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section class="About" id="about">
+  <h1>About Me</h1>
+  <p class="para">
+    Hi, I’m Divya Sree, a passionate web developer with strong foundation in 
+    HTML, CSS, JavaScript, and React. I build responsive and user-friendly 
+    applications while continuously learning new technologies.
+  </p>
+</section>
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills">
+  <h1>Skills</h1>
+
+  <h2>Web Development</h2>
+  <div class="container">
+    <div class="card">HTML</div>
+    <div class="card">CSS</div>
+    <div class="card">JavaScript</div>
+    <div class="card">Responsive Design</div>
+    <div class="card">Git & GitHub</div>
+  </div>
+
+  <h2>MERN Stack</h2>
+  <div class="container">
+    <div class="card">MongoDB</div>
+    <div class="card">Express.js</div>
+    <div class="card">React</div>
+    <div class="card">Node.js</div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects">
   <h1>Projects</h1>
 
   <div class="project-card">
     <h2>Restaurant Website</h2>
-    <p>
-      A responsive restaurant website built using HTML, CSS, and JavaScript. 
-      It showcases menu items, location details, and contact information with a clean design.
-    </p>
+    <p>Responsive restaurant website using HTML, CSS and JavaScript.</p>
   </div>
 
   <div class="project-card">
     <h2>E-commerce Store</h2>
-    <p>
-      An e-commerce application built using the MERN stack. 
-      Includes authentication, product management, and cart system.
-    </p>
+    <p>MERN stack e-commerce app with authentication and cart system.</p>
   </div>
 
   <div class="project-card">
     <h2>Task Management App</h2>
-    <p>
-      A task management app developed using React and Node.js 
-      to create, update, and manage daily tasks.
-    </p>
+    <p>React and Node.js task management application.</p>
   </div>
 </section>
+
+<!-- ================= CONTACT ================= -->
+
 <section id="contact">
-  <h1>Contact Us</h1>
+  <h1>Contact</h1>
 
   <form class="contact-form">
     <input type="text" placeholder="Your Name" required>
     <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message" rows="5" required></textarea>
+    <textarea rows="5" placeholder="Your Message" required></textarea>
     <button type="submit">Send Message</button>
   </form>
-
 </section>
-<script>
-  const toggle = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
 
-  toggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+<!-- ================= SCRIPT ================= -->
+
+<script>
+const toggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+  link.addEventListener("click",()=>{
+    navLinks.classList.remove("active");
   });
+});
 </script>
+
 </body>
 </html>
