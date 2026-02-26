@@ -1,0 +1,246 @@
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-around;
+            align-items: Center;
+            background:rgba(237, 203, 34, 0.904);
+        }
+        .image{
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+        }
+        div{
+            align-items: center;
+            display: flex;
+            gap: 30px;
+        }
+        div a{
+            font-size: 20px;
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            
+        }
+         .navbar a:hover{
+            color: rgb(198, 48, 11);
+        }
+            h1{
+            font-size: 40px;
+             color: rgba(237, 203, 34, 0.904);
+            margin-bottom: 15px;
+        }
+
+        h3{
+            font-size: 20px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .img{
+            height: 600px;
+            width: 450px;
+            
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #b0a81e;
+            transition: transform 0.4s ease;
+        }
+
+        #home{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            text-align: center;
+            background:black;
+        }
+        .text{
+            margin-top: 20px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .About{
+            padding: 50px;
+              height: 50vh;
+            text-align: center;
+            background:black;
+            display: flex;
+            flex-direction: column;
+        }
+        .btn{
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+            background-color: rgba(237, 203, 34, 0.904);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .para{
+            font-size: 20px;
+            color: white;
+            line-height: 1.5;
+            
+        }
+        #about{
+            color: rgba(237, 203, 34, 0.904);
+            margin-bottom: 20px;
+           
+        }
+         /* Skills Section */
+#skills {
+    padding: 50px;
+              height: 80vh;
+            text-align: center;
+            background:black;
+            display: flex;
+            flex-direction: column;
+}
+
+/* Main Heading */
+#skills h1 {
+  color: gold;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+/* Sub Headings */
+#skills h2 {
+  color: gold;
+  margin: 40px 0 20px;
+}
+
+/* Card Container */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Skill Cards */
+.card {
+  background-color: #111;
+  border: 1px solid gold;
+  padding: 20px 30px;
+  border-radius: 8px;
+  width: 200px;
+  transition: 0.3s ease;
+}
+
+/* Card Text */
+.card h3 {
+  color: #fff;
+  margin: 0;
+}
+
+/* Hover Effect */
+.card:hover {
+  background-color: gold;
+  color: #000;
+  transform: translateY(-5px);
+}
+
+.card:hover h3 {
+  color: #000;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+#projects {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#projects h1 {
+  color: gold;
+  margin-bottom: 40px;
+}
+
+/* Project Cards */
+.project-card {
+  background-color: #111;
+  border: 1px solid gold;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  text-align: left;
+}
+
+.project-card h2 {
+  color: gold;
+  margin-top: 0;
+}
+
+.project-card:hover {
+  background-color: gold;
+  color: #000;
+  transition: 0.3s;
+}
+
+.project-card:hover h2 {
+  color: #000;
+}
+
+#contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#contact h1 {
+  color: gold;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid gold;
+  border-radius: 5px;
+  background-color: #111;
+  color: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: gold;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: gold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background-color: #fff;
+  color: #000;
+  transition: 0.3s;
+}
+
